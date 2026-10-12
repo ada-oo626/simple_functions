@@ -26,7 +26,7 @@ class TestSimpleFunctions:
         assert factorial(number) == expected
 
     @pytest.mark.parametrize('number, expected', [
-        (0, 0),
+        (0.0, 0.0),
         (np.pi/4, 0.70710678),
         (np.pi/2, 1),
         (np.pi, 0),
@@ -35,10 +35,10 @@ class TestSimpleFunctions:
         assert sinx(number) == pytest.approx(expected, abs=1e-06)
 
     @pytest.mark.parametrize('number, expected', [
-        (0, 0),
+        (0, 1.0),
         (np.pi/4, 0.70710678),
-        (np.pi/2, 1),
-        (np.pi, 0),
+        (np.pi/2, 0),
+        (np.pi, -1),
     ])
     def test_cosx(self, number, expected):
-        assert cosx(number) == pytest.approx(expected, abs=1e-06)
+        assert cosx(number) == pytest.approx(expected, abs=1e-6)
