@@ -11,7 +11,6 @@ def pi(terms=1):
     """Approximate pi by summing Ramanujan's series from k = 0 to terms."""
     return 1./(2.*sqrt(2.)/9801.*rsum(terms))
 
-
 @cache
 def rsum(n):
     """Return the sum of the terms k = 0, 1, ..., n of Ramanujan's series."""

@@ -1,7 +1,7 @@
 import pytest
-
 from simple_functions import my_sum
 from math import factorial
+
 
 class TestSimpleFunctions:
     """Tests for the functions in functions1.py."""
