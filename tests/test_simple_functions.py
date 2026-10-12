@@ -1,5 +1,5 @@
 import pytest
-from simple_functions import my_sum, sinx
+from simple_functions import my_sum, sinx, cosx
 from math import factorial
 import numpy as np
 
@@ -33,3 +33,12 @@ class TestSimpleFunctions:
     ])
     def test_sin(self, number, expected):
         assert sinx(number) == pytest.approx(expected, abs=1e-06)
+
+    @pytest.mark.parametrize('number, expected', [
+        (0, 0),
+        (np.pi/4, 0.70710678),
+        (np.pi/2, 1),
+        (np.pi, 0),
+    ])
+    def test_cosx(self, number, expected):
+        assert cosx(number) == pytest.approx(expected, abs=1e-06)
