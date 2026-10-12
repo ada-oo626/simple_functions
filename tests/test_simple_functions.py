@@ -3,9 +3,9 @@ from simple_functions import my_sum, sinx
 from math import factorial
 import numpy as np
 
+
 class TestSimpleFunctions:
     """Tests for the functions in functions1.py."""
-
 
     @pytest.mark.parametrize('iterable, expected', [
         ([8, 7, 5], 20),
