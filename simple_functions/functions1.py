@@ -10,6 +10,7 @@ def my_sum(iterable):
         tot += i
     return tot
 
+
 @cache
 def factorial(n):
     """Return n! (n factorial) for a non-negative integer n."""
