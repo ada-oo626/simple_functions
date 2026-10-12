@@ -6,6 +6,7 @@ import numpy as np
 class TestSimpleFunctions:
     """Tests for the functions in functions1.py."""
 
+
     @pytest.mark.parametrize('iterable, expected', [
         ([8, 7, 5], 20),
         ((10, -2, 5, -10, 1), 4),
