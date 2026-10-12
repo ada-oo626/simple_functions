@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# simple_functions
-=======
 # simple_functions
 
 A few simple functions, for practising continuous integration (MPM Lecture 5).
@@ -33,4 +30,4 @@ flake8 .
 ## License
 
 MIT (see `LICENSE`).
->>>>>>> f337eee (Add the simple_functions package)
+
