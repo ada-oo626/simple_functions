@@ -1,7 +1,7 @@
 import pytest
-from simple_functions import my_sum
+from simple_functions import my_sum, sinx
 from math import factorial
-
+import numpy as np
 
 class TestSimpleFunctions:
     """Tests for the functions in functions1.py."""
@@ -23,3 +23,12 @@ class TestSimpleFunctions:
     def test_factorial(self, number, expected):
         """factorial is right for small numbers, including 0! = 1."""
         assert factorial(number) == expected
+
+    @pytest.mark.parametrize('number, expected', [
+        (0, 0),
+        (np.pi/4, 0.70710678),
+        (np.pi/2, 1),
+        (np.pi, 0),
+    ])
+    def test_sin(self, number, expected):
+        assert sinx(number) == pytest.approx(expected, abs=1e-06)
